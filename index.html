@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0A1D37">
+  <meta name="description" content="Conheça o Prev Auto, um protótipo acadêmico que explora recursos de monitoramento de atenção e alertas para promover mais consciência no trânsito.">
+  <title>Prev Auto — Sua segurança começa aqui</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Prev Auto, início">
+      <span class="brand-mark" aria-hidden="true"><span>PA</span></span>
+      <span class="brand-copy"><strong>Prev <em>Auto</em></strong><small>Sua segurança começa aqui</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#recursos">Recursos</a><a class="nav-cta" href="#baixar">Baixar o app ↓</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> TECNOLOGIA E CONSCIÊNCIA NO TRÂNSITO</p>
+        <h1>Prev <span>Auto</span></h1>
+        <h2>Sua segurança<br>começa aqui.</h2>
+        <p class="lead">Uma iniciativa que explora o uso dos sensores do celular para acompanhar sinais de atenção e emitir alertas durante o monitoramento.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#baixar">↓ &nbsp; Conheça o app</a>
+          <a class="button button-secondary" href="#sobre">Saiba mais <span aria-hidden="true">↘</span></a>
+        </div>
+        <p class="platform-note"><span aria-hidden="true">▣</span> Desenvolvido para Android</p>
+      </div>
+      <div class="hero-art" aria-label="Ilustração decorativa de um celular com a marca Prev Auto">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="phone">
+          <div class="phone-speaker"></div>
+          <div class="phone-screen">
+            <div class="screen-lines"></div>
+            <div class="app-emblem"><span class="emblem-shield">✓</span><strong>PREV<br><b>AUTO</b></strong><i>●</i></div>
+            <p>Sua segurança<br><span>começa aqui</span></p>
+            <div class="screen-bottom"></div>
+          </div>
+        </div>
+        <div class="floating-tag"><span class="tag-dot"></span> Atenção em primeiro lugar</div>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+      <div class="section-heading">
+        <p class="eyebrow dark">SOBRE O PROJETO</p>
+        <h2>Tecnologia a serviço da <span>prevenção.</span></h2>
+        <p>O Prev Auto é um protótipo acadêmico que investiga como recursos de um smartphone podem apoiar a conscientização sobre atenção ao volante.</p>
+      </div>
+      <div class="notice"><span class="notice-icon">i</span><p><strong>Importante:</strong> o Prev Auto está em desenvolvimento e não é um sistema certificado de segurança veicular. Não substitui descanso, direção responsável ou equipamentos de segurança.</p></div>
+    </section>
+
+    <section class="features section" id="recursos">
+      <div class="section-heading">
+        <p class="eyebrow">O QUE ESTAMOS EXPLORANDO</p>
+        <h2>Recursos do <span>Prev Auto</span></h2>
+        <p>Funcionalidades em desenvolvimento e validação.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon blue">⌁</div><h3>Monitoramento de movimento</h3><p>Uso do acelerômetro para experimentar a identificação de movimentos bruscos.</p></article>
+        <article class="feature-card"><div class="feature-icon green">◉</div><h3>Análise visual</h3><p>Uso da câmera frontal para detectar rosto e estimar a abertura dos olhos.</p></article>
+        <article class="feature-card"><div class="feature-icon orange">!</div><h3>Alertas sonoros e visuais</h3><p>Uma contagem regressiva acompanhada por alertas durante a simulação de confirmação.</p></article>
+        <article class="feature-card"><div class="feature-icon purple">↗</div><h3>Fluxo de resposta simulado</h3><p>Exploração de telas de confirmação e de uma simulação de resgate.</p></article>
+      </div>
+    </section>
+
+    <section class="download section" id="baixar">
+      <div class="download-copy">
+        <p class="eyebrow">EXPERIMENTE O PROTÓTIPO</p>
+        <h2>Conheça o Prev Auto.</h2>
+        <p>O aplicativo está em fase de desenvolvimento. Quando uma versão de teste estiver pronta para distribuição, o link estará disponível aqui.</p>
+        <a class="button button-primary download-button" href="downloads/prev-auto.apk" id="download-link">↓ &nbsp; Baixar APK para Android</a>
+        <small class="download-hint" id="download-hint">O arquivo APK ainda precisa ser adicionado à pasta <code>downloads</code>.</small>
+      </div>
+      <div class="download-graphic" aria-hidden="true"><div class="big-check">✓</div><p>Dirija com mais atenção.<br><strong>Viva com mais segurança.</strong></p></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark"><span>PA</span></span><span class="brand-copy"><strong>Prev <em>Auto</em></strong><small>Sua segurança começa aqui</small></span></a>
+    <p>Prev Auto · Protótipo acadêmico</p>
+    <a href="#inicio" class="back-top">Voltar ao topo ↑</a>
+  </footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    menuButton.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }));
+    fetch('downloads/prev-auto.apk', { method: 'HEAD' }).then(response => {
+      if (response.ok) {
+        document.getElementById('download-hint').textContent = 'Confira se o APK veio de uma fonte confiável antes de instalar.';
+      } else {
+        document.getElementById('download-link').addEventListener('click', event => {
+          event.preventDefault();
+          document.getElementById('download-hint').textContent = 'O APK ainda não foi publicado. Adicione o arquivo à pasta downloads e publique o site novamente.';
+        });
+      }
+    }).catch(() => {});
+  </script>
+</body>
+</html>
